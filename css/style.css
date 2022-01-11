@@ -1,0 +1,410 @@
+:root {
+    --pGrey: rgb(114, 114, 114);
+
+
+    --pFont: 'Raleway', sans-serif;
+}
+
+/* GLOBALS */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--pFont);
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* GLOBALS */
+
+/*----------------------------------------------------------------------------*/
+
+/* NAV BAR AND MENU */
+
+.cont-nav {
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background: rgb(162, 162, 162);
+    background: linear-gradient(274deg, rgba(162, 162, 162, 1) 30%, rgb(255, 255, 255) 100%);
+}
+
+.checkbtn {
+    color: var(--pGrey);
+    font-size: 3rem;
+    float: right;
+    line-height: 6rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.checkbtn2 {
+    color: white;
+    font-size: 4rem;
+    float: right;
+    line-height: 6rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 781px) {
+
+    .nav-cont:hover .ul-cont {
+        filter: blur(1px);
+
+    }
+
+    .nav-cont .ul-cont:hover {
+        filter: blur(0px);
+        transform: scale(1.1);
+    }
+
+    .checkbtn {
+        z-index: 2;
+        display: block;
+        transition: all 500ms;
+        position: fixed;
+        top: 0px;
+        right: 40px;
+        -webkit-text-stroke: 1.5px var(--pGrey);
+    }
+
+    .checkbtn2 {
+        z-index: 2;
+        display: block;
+        transition: all 500ms;
+        position: fixed;
+        top: 0px;
+        right: 40px;
+        opacity: 0;
+    }
+
+    .dec-bar {
+        position: fixed;
+        background-color: var(--pGrey);
+        width: 35%;
+        height: 1px;
+        top: 60px;
+    }
+
+    .nav-cont {
+        -webkit-box-shadow: 0px 0px 11px 4px #000000;
+        box-shadow: 0px 0px 11px 4px #000000;
+        z-index: 1;
+        padding: 1rem;
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        top: 0rem;
+        right: -100%;
+        -webkit-transition: 500ms;
+        text-align: center;
+        background-color: rgba(31, 31, 31, 0.99);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ul-cont {
+        width: 85%;
+        height: 5rem;
+    }
+
+    .ul-cont li {
+        margin-top: 1rem;
+    }
+
+}
+
+@media (max-width:420px) {
+    .nav-cont {
+        width: 50%;
+    }
+
+}
+
+
+
+#check:checked~.nav-cont {
+    right: 0;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+#check:checked~.checkbtn {
+    color: rgb(31, 31, 31);
+    transform: rotate(360deg);
+    opacity: 0;
+
+}
+
+#check:checked~.checkbtn2 {
+    color: var(--pGrey);
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+#check:hover~.checkbtn {
+    color: rgb(31, 31, 31);
+    -webkit-text-stroke: 1.5px rgb(31, 31, 31);
+}
+
+#check:hover~.checkbtn2 {
+    color: rgb(255, 255, 255);
+}
+
+
+.pMain {
+    z-index: 2;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tittle {
+    z-index: -1;
+    background-color: rgb(0, 0, 0);
+    font-size: 4rem;
+    margin-left: 5rem;
+    background-image: linear-gradient(-75deg,
+            transparent 0,
+            transparent 5%,
+            rgba(255, 255, 255, 0.5) 5%,
+            rgba(255, 255, 255, 0.5) 10%,
+            transparent 10%,
+            transparent 100%);
+    background-size: 200% 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 1s;
+}
+
+.tittle span {
+    font-weight: normal;
+}
+
+.tittle:hover {
+    background-position: -120% 0;
+    pointer-events: fill;
+    cursor: default;
+}
+
+.nav-main {
+    margin-right: 0.9rem;
+
+}
+
+.nav-cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-cont a {
+    color: rgb(59, 59, 59);
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    -webkit-transition: 300ms;
+    border-radius: 9px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.ul-cont {
+    -webkit-transition: 500ms;
+    border-radius: 9px;
+    margin-left: 0.5rem;
+    padding: 0.7rem 0;
+}
+
+.ul-cont:hover {
+    
+
+}
+
+.nav-cont a:hover {
+    color: white;
+}
+
+/* NAV BAR AND MENU */
+
+/*----------------------------------------------------------------------------*/
+
+/* MAIN CONTENT */
+
+.mn {
+    margin: 0rem 1rem 0 1rem;
+}
+
+.product-cont {
+    padding-top: 100px;
+    height: 100rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 2rem;
+    align-items: center;
+    margin: 0 0 0 3.3%;
+    justify-content: center;
+}
+
+
+/* CARD INTERACTION */
+
+.sneaker-cont1, .sneaker-cont2, .sneaker-cont3,
+.sneaker-cont4, .sneaker-cont5, .sneaker-cont6,
+.sneaker-cont7, .sneaker-cont8, .sneaker-cont9,
+.sneaker-cont10, .sneaker-cont11, .sneaker-cont12 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    transition: all 500ms;
+    padding-bottom: 1rem;
+    background: rgb(162, 162, 162);
+    background: linear-gradient(160deg, rgba(255, 255, 255) 30%, rgb(162, 162, 162, 1) 100%);
+
+    overflow: hidden;
+}
+
+.sneaker-cont1::before, .sneaker-cont2::before,
+.sneaker-cont3::before, .sneaker-cont4::before,
+.sneaker-cont5::before, .sneaker-cont6::before,
+.sneaker-cont7::before, .sneaker-cont8::before,
+.sneaker-cont9::before, .sneaker-cont10::before,
+.sneaker-cont11::before, .sneaker-cont12::before {
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.sneaker-cont1:hover::before, .sneaker-cont2:hover::before,
+.sneaker-cont3:hover::before, .sneaker-cont4:hover::before,
+.sneaker-cont5:hover::before, .sneaker-cont6:hover::before,
+.sneaker-cont7:hover::before, .sneaker-cont8:hover::before,
+.sneaker-cont9:hover::before, .sneaker-cont10:hover::before,
+.sneaker-cont11:hover::before, .sneaker-cont12:hover::before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+/* BACKGROUND COLOR */
+.sneaker-cont1::before {
+    background: rgb(32, 32, 32);
+}
+
+.sneaker-cont2::before {
+    background: #94232e;
+}
+
+.sneaker-cont3::before {
+    background: #ad3131;
+}
+
+.sneaker-cont4::before {
+    background: #0d7344;
+}
+/* BACKGROUND COLOR */
+
+.product-cont .sneaker-cont1:hover .sneaker,
+.product-cont .sneaker-cont2:hover .sneaker,
+.product-cont .sneaker-cont3:hover .sneaker,
+.product-cont .sneaker-cont4:hover .sneaker {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* CARD INTERACTION */
+
+.sneaker {
+    margin: 2rem 2rem;
+    background: none;
+    width: 80%;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.sneaker1 {
+    margin: 2rem 2rem;
+    width: 69%;
+    transition: 0.5s ease-in-out;
+}
+
+.sneakerDesc {}
+
+.sneakerImage {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    background-image: url(../imgs/3.1.png);
+    min-height: 44rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* MAIN CONTENT */
+
+/*----------------------------------------------------------------------------*/
+
+/* FOOTER CONTENT */
+
+.top-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.top-btn a {
+    border-radius: 9px;
+    padding: 1rem 2rem;
+    background-color: rgba(162, 162, 162, 1);
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    -webkit-transition: 300ms;
+}
+
+.top-btn a:hover {
+    color: white;
+    background-color: var(--pGrey);
+}
+
+/* FOOTER CONTENT */
