@@ -18,11 +18,15 @@ body {
     font-size: 16px;
 }
 
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
+
 * {
+    user-select: black;
+    -webkit-tap-highlight-color: transparent;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -82,32 +86,46 @@ body {
     margin: 0 2px;
 }
 
-#tx0{
+#tx0 {
     animation-delay: 0;
 }
+
 #tx1 {
     animation-delay: 2s;
 }
+
 #tx2 {
     animation-delay: 3s;
     transition: all 300ms;
 }
+
 #tx3 {
     animation-delay: 2s;
 }
+
 #tx4 {
     animation-delay: 0s;
 }
 
-#tx2:hover{
+#tx2:hover {
     color: red;
 }
 
 
 @keyframes textFlash {
-    0% {opacity: 0;;}
-    50% {opacity: 1;;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+        ;
+    }
+
+    50% {
+        opacity: 1;
+        ;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .cont-nav {
@@ -144,8 +162,6 @@ body {
 }
 
 @media screen and (max-width: 781px) {
-
-
 
     .checkbtn {
         z-index: 4;
@@ -210,6 +226,7 @@ body {
 
 }
 
+
 #check:checked~.nav-cont {
     right: 0;
 }
@@ -250,6 +267,7 @@ body {
 }
 
 .tittle {
+    cursor: default;
     z-index: -1;
     background-color: rgb(0, 0, 0);
     font-size: 4rem;
@@ -262,19 +280,19 @@ body {
             transparent 10%,
             transparent 100%);
     background-size: 200% 100%;
+    animation: reflection 10s ease-in-out infinite;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    transition: 1s;
+}
+
+@keyframes reflection {
+    20%, 100% {
+        background-position: -120% 0;
+    }
 }
 
 .tittle span {
     font-weight: normal;
-}
-
-.tittle:hover {
-    background-position: -120% 0;
-    pointer-events: fill;
-    cursor: default;
 }
 
 .nav-main {
@@ -332,16 +350,18 @@ body {
 
 .product-cont {
     padding-top: 100px;
-    height: 100rem;
+    height: 85rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 2rem;
     align-items: center;
     margin: 0 0 0 3.3%;
     justify-content: center;
 }
+
+
 
 
 /* CARD INTERACTION */
@@ -362,7 +382,6 @@ body {
     padding-bottom: 1rem;
     background: rgb(162, 162, 162);
     background: linear-gradient(160deg, rgba(255, 255, 255) 30%, rgb(162, 162, 162, 1) 100%);
-
     overflow: hidden;
 }
 
@@ -409,16 +428,29 @@ body {
     background: #0d7344;
 }
 
+.sneaker-cont5::before {
+    background: #616161;
+}
+
+.sneaker-cont6::before {
+    background: #c7b7a8;
+}
+
+
+
 /* BACKGROUND COLOR */
 
 .product-cont .sneaker-cont1:hover .sneaker,
 .product-cont .sneaker-cont2:hover .sneaker,
 .product-cont .sneaker-cont3:hover .sneaker,
-.product-cont .sneaker-cont4:hover .sneaker {
+.product-cont .sneaker-cont4:hover .sneaker,
+.product-cont .sneaker-cont5:hover .sneaker,
+.product-cont .sneaker-cont6:hover .sneaker {
     transform: scale(1.2) rotate(-10deg);
 }
 
 /* CARD INTERACTION */
+
 
 .sneaker {
     margin: 2rem 2rem;
@@ -434,13 +466,16 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.sneakerDesc {}
+.sneakerDesc {
+    z-index: 1;
+    color: black;
+}
 
 .sneakerImage {
-    grid-row: 2 / 3;
-    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    grid-column: 1 / 4;
     background-image: url(../imgs/3.1.png);
-    min-height: 44rem;
+    min-height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
