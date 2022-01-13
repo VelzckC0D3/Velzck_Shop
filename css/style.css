@@ -5,21 +5,17 @@
     --pFont: 'Raleway', sans-serif;
 }
 
-body, html {
-    height: 100%;
-}
-
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    min-height: 100%;
+
 }
 
 body {
     font-family: var(--pFont);
     font-size: 16px;
-    background-color: rgb(39, 39, 39);
-    height: ;
 }
 
 *, *:before, *:after {
@@ -39,20 +35,21 @@ body {
 
 /* BACKGROUND IMAGE */
 
-/* .bg-image {
+.bg-image {
     background-image: url(/imgs/BG.jpg);
     position: absolute;
     filter: blur(2px) brightness(0.5);
     width: 100%;
-    height: 193%;
+    height: 120rem;
     background-position: center;
     z-index: -999;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    background-clip: border-box;
 }
- */
+ 
  
 /* BACKGROUND IMAGE */
 
@@ -219,8 +216,9 @@ body {
         width: 40%;
         height: 100%;
         top: 0rem;
-        right: -100%;
-        -webkit--webkit-transition: 500ms;
+        right: -30px;
+        transform:translateX(100%);
+        -webkit-transition: all 600ms;
         text-align: center;
         background-color: rgba(31, 31, 31, 0.99);
         flex-direction: column;
@@ -247,12 +245,13 @@ body {
 
 
 #check:checked~.nav-cont {
-    right: 0;
+    transform:translateX(0%);
 }
 
 
-#check:checked~ul {
-    right: 0;
+#check:checked~.nav-cont {
+   right: 0px;
+   transform:translateX(0%);
 }
 
 #check:checked~.checkbtn {
@@ -330,7 +329,7 @@ body {
     margin: 0 5px;
     text-decoration: none;
     padding: 1rem 1rem;
-    -webkit--webkit-transition: 300ms;
+    -webkit-transition: 300ms;
     border-radius: 9px;
     align-items: center;
     text-transform: uppercase;
@@ -342,11 +341,15 @@ body {
     .nav-cont a {
         color: rgb(151, 151, 151)
     }
+
+    .bg-image{
+        height: 103rem;
+    }
 }
 
 
 .ul-cont {
-    -webkit--webkit-transition: 500ms;
+    -webkit-transition: all 500ms;
     border-radius: 9px;
     margin-left: 0.5rem;
     padding: 0.7rem 0;
@@ -452,7 +455,7 @@ body {
 }
 
 .sneaker-cont8::before {
-    background: #a2a499;
+    background: #cabfba;
 }
 
 .sneaker-cont9::before {
@@ -566,14 +569,15 @@ body {
     justify-items: center;
 }
 
-.sneaker-cont8 .sneaker {
-    height: 50%;
-    width: 68%;
-}
+
 
 @media (max-width: 1024px) {
     .product-cont {
         height: 90rem;
+    }
+
+    .bg-image{
+        height: 138rem;
     }
 }
 
