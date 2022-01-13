@@ -10,6 +10,10 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     min-height: 100%;
+    background-image: url(/imgs/BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -326,10 +330,6 @@ body {
     .nav-cont a {
         color: rgb(151, 151, 151)
     }
-
-    .bg-image{
-        height: 103rem;
-    }
 }
 
 
@@ -559,10 +559,6 @@ body {
 @media (max-width: 1024px) {
     .product-cont {
         height: 90rem;
-    }
-
-    .bg-image{
-        height: 138rem;
     }
 }
 
