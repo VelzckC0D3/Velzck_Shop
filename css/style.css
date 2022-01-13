@@ -535,7 +535,7 @@ body {
     -webkit-transition: 0.5s;
     -webkit-transition-delay: 0.2s;
     transform: translateY(30rem);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.575) 30%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.575) 30%, transparent 100%);
     z-index: -1;
 }
 
