@@ -35,21 +35,6 @@ body {
 
 /* BACKGROUND IMAGE */
 
-.bg-image {
-    background-image: url(/imgs/BG.jpg);
-    position: absolute;
-    filter: blur(2px) brightness(0.5);
-    width: 100%;
-    height: 120rem;
-    background-position: center;
-    z-index: -999;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    background-clip: border-box;
-}
- 
  
 /* BACKGROUND IMAGE */
 
