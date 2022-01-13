@@ -14,6 +14,8 @@ html {
 body {
     font-family: var(--pFont);
     font-size: 16px;
+    background-color: rgb(219, 219, 219);
+    height: ;
 }
 
 *, *:before, *:after {
@@ -29,6 +31,21 @@ body {
 /* GLOBALS */
 
 /*----------------------------------------------------------------------------*/
+
+/* BACKGROUND IMAGE */
+
+.bg-image{
+    position:absolute;
+    width: 100%;
+    height: 193%;
+    background-image: url(/imgs/BG.jpg);
+    background-position: center;
+    z-index: -999;
+    filter: blur(2px) brightness(0.5);
+}
+
+/* BACKGROUND IMAGE */
+
 
 /* NAV BAR AND MENU */
 
@@ -343,7 +360,8 @@ body {
 
 /* CARD INTERACTION */
 
-.product-cont>*:not(.scrollImage-cont) {
+.product-cont>*:not(.scrollImage-cont) /* sneaker-cont */{
+    border-radius: 9px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -354,13 +372,24 @@ body {
     height: 100%;
     transition: all 500ms;
     padding-bottom: 1rem;
-    background: rgb(162, 162, 162);
+    background-color: rgb(29, 29, 29);
     transition: 500ms;
-    background: linear-gradient(160deg, rgba(255, 255, 255) 30%, rgb(162, 162, 162, 1) 100%);
     overflow: hidden;
 }
 
-.product-cont>*:not(.scrollImage-cont)::before {
+.product-cont>*:not(.scrollImage-cont)::after {
+    content: "velzck";
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    font-size: 11rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+
+    .product-cont>*:not(.scrollImage-cont)::before {
     z-index: 1;
     content: '';
     width: 100%;
@@ -379,7 +408,7 @@ body {
 /* BACKGROUND COLOR */
 
 .sneaker-cont1::before {
-    background: rgb(32, 32, 32);
+    background: rgb(116, 116, 116);
 }
 .sneaker-cont2::before {
     background: #94232e;
@@ -388,7 +417,7 @@ body {
     background: #ad3131;
 }
 .sneaker-cont4::before {
-    background: #0d7344;
+    background: #a5b6ae;
 }
 .sneaker-cont5::before {
     background: #616161;
@@ -397,16 +426,16 @@ body {
     background: #c7b7a8;
 }
 .sneaker-cont7::before {
-    background: #ce2727;
+    background: #d65601;
 }
 .sneaker-cont8::before {
-    background: #c7b7a8;
+    background: #a2a499;
 }
 .sneaker-cont9::before {
-    background: #c7b7a8;
+    background: #afb484;
 }
 .sneaker-cont10::before {
-    background: #c7b7a8;
+    background: #111111;
 }
 
 /* BACKGROUND COLOR */
@@ -463,7 +492,7 @@ body {
     text-transform: uppercase;
     font-size: 1.5rem;
     transition: all 0.5s;
-    transform: translateY(80px);
+    transform: translateY(-280px);
     color: white;
     opacity: 0;
 }
