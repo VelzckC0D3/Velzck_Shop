@@ -1,11 +1,9 @@
+/* GLOBALS */
+
 :root {
     --pGrey: rgb(114, 114, 114);
-
-
     --pFont: 'Raleway', sans-serif;
 }
-
-/* GLOBALS */
 
 html {
     font-size: 62.5%;
@@ -18,13 +16,8 @@ body {
     font-size: 16px;
 }
 
-
 *, *:before, *:after {
     box-sizing: inherit;
-}
-
-
-* {
     user-select: black;
     -webkit-tap-highlight-color: transparent;
     padding: 0;
@@ -36,7 +29,7 @@ body {
 /* GLOBALS */
 
 /*----------------------------------------------------------------------------*/
-/*  */
+
 /* NAV BAR AND MENU */
 
 .menuBar {
@@ -56,8 +49,7 @@ body {
     z-index: 3;
 }
 
-
-.ancBar {
+.noticeBar {
     top: 6rem;
     width: 100%;
     height: 3rem;
@@ -73,7 +65,7 @@ body {
     z-index: 2;
 }
 
-.ancBar h2 {
+.noticeBar h2 {
     position: relative;
     text-transform: uppercase;
     color: white;
@@ -351,10 +343,7 @@ body {
 
 /* CARD INTERACTION */
 
-.sneaker-cont1, .sneaker-cont2, .sneaker-cont3,
-.sneaker-cont4, .sneaker-cont5, .sneaker-cont6,
-.sneaker-cont7, .sneaker-cont8, .sneaker-cont9,
-.sneaker-cont10, .sneaker-cont11, .sneaker-cont12 {
+.product-cont>*:not(.scrollImage-cont) {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -371,12 +360,7 @@ body {
     overflow: hidden;
 }
 
-.sneaker-cont1::before, .sneaker-cont2::before,
-.sneaker-cont3::before, .sneaker-cont4::before,
-.sneaker-cont5::before, .sneaker-cont6::before,
-.sneaker-cont7::before, .sneaker-cont8::before,
-.sneaker-cont9::before, .sneaker-cont10::before,
-.sneaker-cont11::before, .sneaker-cont12::before {
+.product-cont>*:not(.scrollImage-cont)::before {
     z-index: 1;
     content: '';
     width: 100%;
@@ -397,39 +381,30 @@ body {
 .sneaker-cont1::before {
     background: rgb(32, 32, 32);
 }
-
 .sneaker-cont2::before {
     background: #94232e;
 }
-
 .sneaker-cont3::before {
     background: #ad3131;
 }
-
 .sneaker-cont4::before {
     background: #0d7344;
 }
-
 .sneaker-cont5::before {
     background: #616161;
 }
-
 .sneaker-cont6::before {
     background: #c7b7a8;
 }
-
 .sneaker-cont7::before {
     background: #ce2727;
 }
-
 .sneaker-cont8::before {
     background: #c7b7a8;
 }
-
 .sneaker-cont9::before {
     background: #c7b7a8;
 }
-
 .sneaker-cont10::before {
     background: #c7b7a8;
 }
@@ -439,44 +414,30 @@ body {
 
 .product-cont>*:hover .sneaker {
     transform: scale(1.2) rotate(-10deg);
-
 }
-
-
 .product-cont>*:hover .sneakerDesc h2 {
     color: white;
     transform: translateY(-140px);
     opacity: 1;
 }
-
 .product-cont>*:hover .sneaker-decor {
     transform: translateY(0px);
 }
-
-.product-cont>*:not(.sneakerImage-cont):hover {
+.product-cont>*:not(.scrollImage-cont):hover {
     transform: scale(1.1);
 }
-
-
-
-
-
 .product-cont>*:hover .sneakerSize h3 {
     transition: all 0.5s;
     transition-delay: 0.4s;
     transform: translateY(15px);
     opacity: 1;
 }
-
 .product-cont>*:hover .sneakerSize .sizes {
     transition: all 0.5s;
     transition-delay: 0.6s;
     transform: translateY(15px);
     opacity: 1;
 }
-
-/* CARD INTERACTION */
-
 
 .sneaker {
     margin: 2rem 2rem;
@@ -532,8 +493,6 @@ body {
     color: white;
 }
 
-.sneakerDesc .sneakerSize .sizes span {}
-
 .product-cont {
     padding-bottom: 1.5rem;
     padding-top: 100px;
@@ -560,7 +519,7 @@ body {
 }
 
 
-.sneakerImage-cont {
+.scrollImage-cont {
     grid-row: 2 / 4;
     grid-column: 1 / 4;
     height: 100%;
@@ -569,140 +528,63 @@ body {
     margin: 0rem 2.1rem 0rem 0.85rem;
 }
 
-.sneaker-slider {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow: hidden !important;
-
-}
-
 #snkc {
     box-shadow: 0px 10px 13px -7px #000000, -50px -50px 0px -30px rgba(0,0,0,0)
 }
 
 .sneakerCont {
     height: 100%;
-    animation: IamGood ease-in-out 35s infinite;
+    animation: scrollImage ease-in-out 35s infinite;
     transform: translateY(0);
     bottom: 0;
     overflow: hidden;
-
 }
 
-@keyframes IamGood {
+@keyframes scrollImage {
     15% {
         transform: translateY(0rem);
     }
-
     20% {
         transform: translateY(0rem);
     }
-
     25% {
         transform: translateY(-100%);
     }
-
     35% {
         transform: translateY(-100%);
     }
-
     45% {
         transform: translateY(-100%);
     }
-
     50% {
         transform: translateY(-200%);
     }
-
     60% {
         transform: translateY(-200%);
     }
-
     70% {
         transform: translateY(-200%);
     }
-
     75% {
         transform: translateY(-300%);
     }
-
     85% {
         transform: translateY(-300%);
     }
-
     95% {
         transform: translateY(-300%);
     }
-
     99.999% {
         transform: translateY(-400%);
     }
-
     100% {
         transform: translateY(0rem);
     }
-
 }
 
-.sneakerImage-cont img {
+.scrollImage-cont img {
     max-width: 100%;
 }
-
-
-
-/* .snk1{
- z-index: -4;
-}
-.snk2{
-    transform: translateY(500rem);
-    animation: scrolling ease-in-out 10s infinite;
-    animation-delay: 2s;
-    z-index: -3;
-}
-.snk3{
-    transform: translateY(500rem);
-    animation: scrolling ease-in-out 10s infinite;
-    z-index: -2;
-    animation-delay: 4s;
-}
-
-.snk4{
-    transform: translateY(500rem);
-    animation: scrolling ease-in-out 10s infinite;
-    z-index: -1;
-    animation-delay: 6s;
-  
-}
- */
-@keyframes scrolling {
-    20% {
-        transform: translateY(0rem);
-    }
-
-    80% {
-        transform: translateY(0rem);
-    }
-
-    80.1% {
-        transform: translateY(500rem);
-    }
-}
-
-
-
-
-/* 
-.sneakerImage {
-    grid-row: 2 / 4;
-    grid-column: 1 / 4;
-    background-image: url(../imgs/3.1.png);
-    min-height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
- */
-
 
 
 /* MAIN CONTENT */
