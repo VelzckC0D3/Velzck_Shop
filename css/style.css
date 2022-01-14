@@ -350,6 +350,7 @@ body {
 
 /* sneaker-cont */
 .product-cont>*:not(.scrollImage-cont, .scrollImage-cont1) {
+    transform: scale(1);
     border-radius: 9px;
     display: flex;
     flex-direction: column;
@@ -484,8 +485,6 @@ body {
 }
 
 .sneaker {
-    margin: 2rem 2rem;
-    background: none;
     width: 69%;
     -webkit-transition: 0.5s ease-in-out;
     z-index: 2;
@@ -542,7 +541,7 @@ body {
 }
 
 .btnBuy:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     opacity: 1;
     background-color: #08ee00;
     color: black;
@@ -622,9 +621,8 @@ body {
 
 /* card-cont */
 .product-cont {
-    padding-bottom: 1.5rem;
-    padding-top: 100px;
-    height: 189.5rem;
+    padding: 11rem 4rem 1rem ;
+    height: 181.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
@@ -634,7 +632,6 @@ body {
     justify-content: center;
     justify-items: center;
     -webkit-user-select: none;
-    
 }
 
 .scrollImage-cont {
@@ -645,6 +642,7 @@ body {
     transform: translateX(0.6rem);
     margin: 0rem 2.1rem 0rem 0.85rem;
     border-radius: 9px;
+    
 }
 
 .scrollImage-cont1 {
@@ -669,6 +667,7 @@ body {
     transform: translateY(0);
     bottom: 0;
     overflow: hidden;
+    
 }
 
 .sneakerCont2 {
@@ -736,7 +735,7 @@ body {
 .scrollImage-cont img,
 .scrollImage-cont1 img {
     max-width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
