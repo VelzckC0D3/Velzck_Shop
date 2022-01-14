@@ -486,7 +486,7 @@ body {
 .sneaker {
     margin: 2rem 2rem;
     background: none;
-    width: 80%;
+    width: 69%;
     -webkit-transition: 0.5s ease-in-out;
     z-index: 2;
     -webkit-user-select: none;
@@ -634,6 +634,7 @@ body {
     justify-content: center;
     justify-items: center;
     -webkit-user-select: none;
+    
 }
 
 .scrollImage-cont {
