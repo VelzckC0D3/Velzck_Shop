@@ -195,7 +195,7 @@ body {
     .dec-bar {
         position: fixed;
         background-color: var(--pGrey);
-        width: 35%;
+        width: 100%;
         height: 1px;
         top: 60px;
     }
@@ -226,12 +226,7 @@ body {
     .ul-cont li {
         margin-top: 1rem;
     }
-}
 
-@media (max-width:420px) {
-    .nav-cont {
-        width: 50%;
-    }
 }
 
 
