@@ -174,8 +174,34 @@ body {
 
 @media screen and (max-width: 780px) {
 
+    html {
+        position: absolute;
+    }
+
+    .scrollImage-cont {
+        grid-column: 1 / 4!important;
+        grid-row: 2 / 4!important;
+        box-shadow: 0px 10px 13px -7px #000000, -50px -50px 0px -30px rgba(0, 0, 0, 0)
+    }
+
+    
+    .scrollImage-cont2 {
+        grid-column: 1 / 4!important;
+        grid-row: 6 / 8!important;
+        box-shadow: 0px 10px 13px -7px #000000, -50px -50px 0px -30px rgba(0, 0, 0, 0)
+    }
+
     .product-cont {
-        width: 80rem
+        height: 225.5rem !important;
+        padding-top: 9rem !important;
+        grid-template-columns: repeat(3, 1fr)!important;  
+        grid-row-gap: 2.2rem !important;
+        grid-column-gap: 0rem !important;
+    }
+
+    .sneaker-cont16 {
+        grid-column: 2 / 3;
+        grid-row: 10 / 11;
     }
 
     .checkbtn {
@@ -210,7 +236,7 @@ body {
         -webkit-box-shadow: 0px 0px 11px 4px #000000;
         box-shadow: 0px 0px 11px 4px #000000;
         z-index: 5;
-        padding: 1rem;
+        padding: 22px 0px 0px 0px;
         position: fixed;
         width: 40%;
         height: 100%;
@@ -222,7 +248,6 @@ body {
         background-color: rgba(31, 31, 31, 0.99);
         flex-direction: column;
         align-items: center;
-
     }
 
     .ul-cont {
@@ -706,12 +731,8 @@ body {
 
 @media screen and (max-width:1024px) {
 
-    .mn {
-        width: 100%;
-    }
-
     .product-cont {
-        max-height: 163rem;
+        height: 163rem;
     }
 
     .sneakerDesc {
