@@ -35,6 +35,8 @@ body {
 
 .mn {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -170,7 +172,11 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 781px) {
+@media screen and (max-width: 780px) {
+
+    .product-cont {
+        width: 80rem
+    }
 
     .checkbtn {
         z-index: 4;
@@ -193,7 +199,7 @@ body {
     }
 
     .dec-bar {
-        position: fixed;
+        position: absolute;
         background-color: var(--pGrey);
         width: 100%;
         height: 1px;
@@ -216,6 +222,7 @@ body {
         background-color: rgba(31, 31, 31, 0.99);
         flex-direction: column;
         align-items: center;
+
     }
 
     .ul-cont {
@@ -269,6 +276,7 @@ body {
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .tittle {
@@ -555,13 +563,6 @@ body {
     opacity: 0;
 }
 
-@media (max-width: 786px) {
-    .product-cont {
-        width: 80rem;
-    }
-
-}
-
 .btnBuy-cont {
     -webkit-transition: all 0.2s;
     opacity: 0;
@@ -688,7 +689,7 @@ body {
     grid-column: 1 / 4;
     grid-row: 2 / 4;
     height: 100%;
-  max-width: 97%;
+    max-width: 97%;
     overflow: hidden;
     border-radius: 9px;
 }
@@ -697,7 +698,7 @@ body {
     grid-column: 2 / 5;
     grid-row: 5 / 7;
     height: 100%;
-  max-width: 97%;
+    max-width: 97%;
     overflow: hidden;
     border-radius: 9px;
     object-fit: contain;
@@ -705,10 +706,10 @@ body {
 
 @media screen and (max-width:1024px) {
 
-    .mn{
+    .mn {
         width: 100%;
     }
-     
+
     .product-cont {
         max-height: 163rem;
     }
@@ -731,11 +732,11 @@ body {
         display: block;
     }
 
-    .product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::after{
+    .product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::after {
         left: -36px;
-       font-size: 600%;
+        font-size: 600%;
     }
-    
+
 
     .sneakerDesc .sneakerSize h3 {}
 }
