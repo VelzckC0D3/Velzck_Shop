@@ -28,8 +28,20 @@ body {
     margin: 0;
     text-decoration: none;
     list-style: none;
-    -webkit-transition: transform 0.5s, opacity 0.2s ;
+    -webkit-transition: transform 0.5s, opacity 0.2s;
 }
+
+/* MAIN CONTENT */
+
+.mn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.98);
+    object-fit: cover;
+}
+
 
 /* GLOBALS */
 
@@ -56,7 +68,7 @@ body {
 
 .noticeBar {
     top: 6rem;
-    width: 100%;
+    min-width: 100%;
     height: 3rem;
     background-color: black;
     position: absolute;
@@ -214,14 +226,12 @@ body {
     .ul-cont li {
         margin-top: 1rem;
     }
-
 }
 
 @media (max-width:420px) {
     .nav-cont {
         width: 50%;
     }
-
 }
 
 
@@ -340,16 +350,28 @@ body {
 
 /*----------------------------------------------------------------------------*/
 
-/* MAIN CONTENT */
-
-.mn {
-    margin: 0rem 1rem 0 1rem;
-}
 
 /* CARD INTERACTION */
 
+/* card-cont */
+.product-cont {
+    padding: 11rem 3rem 1rem;
+    max-width: 125rem;
+    min-width: 75rem;
+    height: 200rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 0fr;
+    grid-row-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    -webkit-user-select: none;
+}
+
 /* sneaker-cont */
-.product-cont>*:not(.scrollImage-cont, .scrollImage-cont1) {
+.product-cont>*:not(.scrollImage-cont, .scrollImage-cont2) {
     transform: scale(1);
     border-radius: 9px;
     display: flex;
@@ -361,13 +383,13 @@ body {
     width: 90%;
     height: 100%;
     -webkit-transition: all 500ms;
-    padding-bottom: 1rem;
     background-color: rgb(29, 29, 29);
     overflow: hidden;
 }
+
 /* sneaker-cont */
 
-.product-cont>*:not(.scrollImage-cont, .scrollImage-cont1)::after {
+.product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::after {
     content: "velzck";
     position: absolute;
     top: 45%;
@@ -376,10 +398,12 @@ body {
     font-weight: 800;
     font-style: italic;
     color: rgb(36, 36, 36);
+    -webkit-transition: 0.5s ease-in-out;
+
 }
 
 
-.product-cont>*:not(.scrollImage-cont, .scrollImage-cont1)::before {
+.product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::before {
     z-index: 1;
     content: '';
     width: 100%;
@@ -397,7 +421,7 @@ body {
 
 .product-cont>*:hover::after {
     transform: scale(2) translateY(1.5rem);
-    color: rgb(59, 59, 59);
+    color: rgb(80, 80, 80);
 }
 
 /* BACKGROUND COLOR */
@@ -442,36 +466,59 @@ body {
     background: #111111;
 }
 
+.sneaker-cont11::before {
+    background: #bfb399;
+}
+
+.sneaker-cont12::before {
+    background: #a6a89d;
+}
+
+.sneaker-cont13::before {
+    background: #31445b;
+}
+
+.sneaker-cont14::before {
+    background: #c3472e;
+}
+
+.sneaker-cont15::before {
+    background: #737c85;
+}
+
+.sneaker-cont16::before {
+    background: #b7bab5;
+}
+
 /* BACKGROUND COLOR */
 
 
-.product-cont>*:hover .sneaker {
-    transform: scale(1.15) rotate(-10deg);
+.product-cont>*:hover .sneaker-img {
+    transform: scale(1.2) rotate(-10deg);
 }
 
-.product-cont>*:hover .sneakerDesc h2 {
+.product-cont>*:hover .sneakerDesc .sneakerName {
     color: white;
-    transform: translateY(-140px);
+    transform: translateY(-17.5rem);
     opacity: 1;
 }
 
 .product-cont>*:hover .sneaker-decor {
-    transform: translateY(0px);
+    transform: translateY(2.5rem);
 }
 
-.product-cont>*:not(.scrollImage-cont, .scrollImage-cont1):hover {
+.product-cont>*:not(.scrollImage-cont, .scrollImage-cont2):hover {
     transform: scale(1.1);
 }
 
 .product-cont>*:hover .sneakerSize h3 {
     -webkit-transition: all 0.5s;
     -webkit-transition-delay: 0.4s;
-    transform: translateY(1.5rem) translateX(-5rem);
     opacity: 1;
 }
 
 .product-cont>*:hover .btnBuy-cont {
-    transform: translateY(1.2rem) translateX(5rem);
+    transform: translateY(-1.5rem) translateX(4rem);
     -webkit-transition: all 0.5s;
     -webkit-transition-delay: 1s;
     opacity: 1;
@@ -479,22 +526,21 @@ body {
 
 .product-cont>*:hover .sneakerSize .sizes {
     -webkit-transition: all 0.5s;
-    -webkit-transition-delay: 0.6s;
-    transform: translateY(1.5rem) translateX(-5rem);
+    -webkit-transition-delay: 0.65s;
+    transform: translateY(0) translateX(0);
     opacity: 1;
 }
 
-.sneaker {
-    width: 69%;
+.sneaker-img {
+    width: 73%;
     -webkit-transition: 0.5s ease-in-out;
     z-index: 2;
     -webkit-user-select: none;
 }
 
 .sneakerDesc {
-    -webkit-transform: scale(1);
     width: 100%;
-    height: 78%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -503,16 +549,22 @@ body {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    padding: 14rem 0rem 0rem 0rem;
 }
 
-.sneakerDesc h2 {
+.sneakerDesc .sneakerName {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     -webkit-transition: all 0.5s;
     transform: translateY(-280px);
     color: white;
     opacity: 0;
+}
+
+@media (max-width: 786px) {
+    .product-cont {
+        width: 80rem;
+    }
+
 }
 
 .btnBuy-cont {
@@ -524,7 +576,7 @@ body {
     z-index: 2;
     text-transform: uppercase;
     font-size: 1.3rem;
-    transform: translateY(4rem) translateX(5rem);
+    transform: translateY(4rem) translateX(4rem);
     position: absolute;
 }
 
@@ -563,7 +615,7 @@ body {
 }
 
 .btnBuy h3 {
-    -webkit-transition:all 1000ms;
+    -webkit-transition: all 1000ms;
     pointer-events: fill;
     width: 9rem;
     height: 2rem;
@@ -583,7 +635,7 @@ body {
     letter-spacing: 1rem;
 }
 
-.btnBuy:hover i{
+.btnBuy:hover i {
     opacity: 1;
 }
 
@@ -607,55 +659,94 @@ body {
     color: white;
     text-transform: uppercase;
     font-size: 1.3rem;
+    opacity: 0;
+}
+
+.sneakerSize {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
     transform: translateY(7rem) translateX(-5rem);
     opacity: 0;
 }
 
+.product-cont>*:hover .sneakerSize {
+    -webkit-transition: all 0.5s;
+    -webkit-transition-delay: 0.4s;
+    transform: translateY(-1.2rem) translateX(-5rem);
+    opacity: 1;
+}
+
 .sneakerDesc .sneakerSize .sizes {
     font-size: 1.3rem;
-    transform: translateY(7rem) translateX(-5rem);
+    transform: translateY(7rem);
     color: white;
     opacity: 0;
 }
 
 
 /* card-cont */
-.product-cont {
-    padding: 11rem 4rem 1rem ;
-    height: 181.5rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    -webkit-user-select: none;
-}
+
+/* scrollCont */
 
 .scrollImage-cont {
     grid-column: 1 / 4;
     grid-row: 2 / 4;
-    max-height: 100%;
+    height: 100%;
+  max-width: 97%;
     overflow: hidden;
-    transform: translateX(0.6rem);
-    margin: 0rem 2.1rem 0rem 0.85rem;
     border-radius: 9px;
-    
 }
 
-.scrollImage-cont1 {
+.scrollImage-cont2 {
     grid-column: 2 / 5;
     grid-row: 5 / 7;
-    max-height: 100%;
+    height: 100%;
+  max-width: 97%;
     overflow: hidden;
-    transform: translateX(0.6rem);
-    margin: 0rem 2.1rem 0rem 0.85rem;
     border-radius: 9px;
+    object-fit: contain;
+}
+
+@media screen and (max-width:1024px) {
+
+    .mn{
+        width: 100%;
+    }
+     
+    .product-cont {
+        max-height: 163rem;
+    }
+
+    .sneakerDesc {
+        -webkit-transform: scale(0.8);
+        top: 2rem;
+    }
+
+    .sneakerCont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scrollImage-cont,
+    .scrollImage-cont2 {
+        max-width: 97%;
+        height: 100%;
+        display: block;
+    }
+
+    .product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::after{
+        left: -36px;
+       font-size: 600%;
+    }
+    
+
+    .sneakerDesc .sneakerSize h3 {}
 }
 
 
+/* scrollCont */
 
 #snkc {
     box-shadow: 0px 10px 13px -7px #000000, -50px -50px 0px -30px rgba(0, 0, 0, 0)
@@ -663,19 +754,19 @@ body {
 
 .sneakerCont {
     height: 100%;
+    width: 100%;
     -webkit-animation: scrollImage ease-in-out 30s infinite;
-    transform: translateY(0);
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    
+    border-radius: 9px;
 }
 
-.sneakerCont2 {
-    height: 100%;
-    -webkit-animation: scrollImage2 ease-in-out 30s infinite;
-    transform: translateY(0);
-    bottom: 0;
-    overflow: hidden;
+.sneakerCont img {
+    width: 100%;
+    border-radius: 9px;
 }
 
 @keyframes scrollImage {
@@ -732,11 +823,6 @@ body {
     }
 }
 
-.scrollImage-cont img,
-.scrollImage-cont1 img {
-    max-width: 100%;
-    object-fit: contain;
-}
 
 
 /* MAIN CONTENT */
@@ -763,7 +849,7 @@ body {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: bold;
-    -webkit--webkit-transition: 300ms;
+    -webkit-transition: 300ms;
 }
 
 .top-btn a:hover {
