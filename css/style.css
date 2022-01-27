@@ -176,27 +176,38 @@ body {
 
     html {
         position: absolute;
+        
+    }
+    
+    .product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::after {
+        left: -45px !important;
+        font-size: 900% !important;
     }
 
     .scrollImage-cont {
-        grid-column: 1 / 4!important;
-        grid-row: 2 / 4!important;
-        box-shadow: 0px 10px 13px -7px #000000, -50px -50px 0px -30px rgba(0, 0, 0, 0)
+        grid-column: 1 / 3!important;
+        grid-row: 3 / 5!important;
+    
     }
 
     
     .scrollImage-cont2 {
-        grid-column: 1 / 4!important;
-        grid-row: 6 / 8!important;
-        box-shadow: 0px 10px 13px -7px #000000, -50px -50px 0px -30px rgba(0, 0, 0, 0)
+        grid-column: 1 / 3!important;
+        grid-row: 7 / 9!important;
+    
     }
 
     .product-cont {
-        height: 225.5rem !important;
+        height: 330.5rem !important;
         padding-top: 9rem !important;
-        grid-template-columns: repeat(3, 1fr)!important;  
+        grid-template-columns: repeat(2, 1fr)!important;  
         grid-row-gap: 2.2rem !important;
         grid-column-gap: 0rem !important;
+    }
+
+    .sneakerDesc{
+        top: -4px !important;
+        -webkit-transform: scale(1.1)!important;
     }
 
     .sneaker-cont16 {
