@@ -324,6 +324,7 @@ body {
         grid-template-rows: 44rem 1fr 1fr 1fr 1fr 44rem 1fr 1fr 1fr !important;
         grid-row-gap: 4.5rem !important;
         grid-column-gap: 1rem !important;
+        margin-bottom: 6rem;
     }
 
     .product-cont>*:not(.scrollImage-cont,
@@ -460,6 +461,34 @@ body {
         margin-top: 1rem;
     }
 
+    .footer-cont{
+        -webkit-transform: scale(1.5);
+        width: 80% !important;
+        justify-content: center !important;
+        padding-left: 21rem !important;
+    }
+
+    .footerBar-cont{
+        z-index: 1;
+        -webkit-transform: translateY(-7rem);
+    }
+
+    .footerBar-cont2{
+        z-index: 1;
+        -webkit-transform: translateY(23rem) !important;
+    }
+
+    .footerBar2 {
+        width: 79% !important;
+    }
+
+    .velzck {
+        width: 66% !important;
+    }
+    
+    .FAQ-cont{
+        width: 35% !important;
+    }
 
 }
 
@@ -467,6 +496,36 @@ body {
     html {
         zoom: 43.5% !important;
     }
+
+    .footer-cont{
+        -webkit-transform: scale(2.1) !important;
+        width: 64.4% !important;
+        justify-content: flex-end !important;
+        padding-left: 9rem;
+        padding-top: 3rem;
+    }
+
+    .footerBar-cont{
+        -webkit-transform: translateY(-15rem);
+    }
+
+    .footerBar-cont2{
+        -webkit-transform: translateY(31rem) !important;
+    }
+
+    .footerBar2 {
+        width: 87% !important;
+        height: 2px;
+    }
+
+    .velzck {
+        width: 69.1% !important;
+    }
+
+    .product-cont {
+        margin-bottom: 14rem;
+    }
+
 }
 
 @media screen and (max-width: 580px) {
@@ -1165,6 +1224,24 @@ body {
 }
 
 
+@media (max-width: 1024px) and (min-width: 800px) {
+
+    .FAQ-cont {
+        min-width: 35%;
+    }
+
+    .socialIcons {
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+
+    .footerBar2,
+    .velzck {
+        width: 80% !important;
+    }
+}
+
+
 /* scrollCont */
 
 #snkc {
@@ -1365,7 +1442,7 @@ body {
 
 }
 
-.contact li{
+.contact li {
     cursor: pointer;
     color: rgb(75, 75, 75);
     -webkit-transition: all 500ms;
