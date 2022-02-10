@@ -14,66 +14,152 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 </head>
 
 <body>
 
     <header id="top">
+
+
         <div class="cont-nav pMain">
             <h1 class="tittle"> <span>Velzck</span> Shop</h1>
             <div class="menuBar"></div>
             <div class="nav-main">
 
                 <nav>
-                    <input type="checkbox" id="check">
 
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-bars"></i>
-                    </label>
-
-                    <label for="check" class="checkbtn2">
-                        <i class="fas fa-times"></i>
-                    </label>
-
-                    <ul class="nav-cont">
+                    <ul class="nav-cont ">
                         <div class="dec-bar"></div>
 
-                        <div class="ul-cont">
-                            <li><a href="#">FAQ us</a></li>
+                        <div class="ul-cont ul1">
+                            <li><a href="#shop"> Shop</a></li>
                         </div>
 
-                        <div class="ul-cont">
-                            <li><a href="#"> Shop</a></li>
+                        <div class="ul-cont ul2">
+                            <li><a href="#aboutUs">about us</a></li>
                         </div>
 
-                        <div class="ul-cont">
-                            <li><a href="#">Contact</a></li>
+                        <div class="ul-cont ul3">
+                            <li><a href="#contact">Contact</a></li>
                         </div>
 
-                        <div class="ul-cont">
-                            <li><a href="#">FAQ</a></li>
+                        <div class="ul-cont ul4">
+                            <li><a href="#FAQ">FAQ</a></li>
                         </div>
 
-                        <div class="ul-cont">
+                        <div class="ul-cont ul5">
                             <li><a href="#">log in</a></li>
                         </div>
 
                     </ul>
                 </nav>
             </div>
+            <div class="menu-btn"><i class="fas fa-bars"></i></div>
+            <div class="menu-btn-active"><i class="fas fa-times"></i></div>
         </div>
 
-        <div class="noticeBar">
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu-btn').click(function () {
+                $('.nav-cont').toggleClass('active')
+                $('.menu-btn').toggleClass('btn-active')
+                $('.menu-btn-active').toggleClass('close-active')
+                $('.ul1').toggleClass('active')
+                $('.ul2').toggleClass('active')
+                $('.ul3').toggleClass('active')
+                $('.ul4').toggleClass('active')
+                $('.ul5').toggleClass('active')
+            })
+        })
+    </script>
+
+    <div class="hero-parallax">
+        <div class="rellax snkbg" data-rellax-speed="-2.5"data-rellax-zindex="0"></div>
+        <div class="rellax snk" data-rellax-speed="-1" data-rellax-zindex="1"></div>
+
+        <script src="/rellax.min.js"></script>
+        <script>
+            var rellax = new Rellax('.rellax');
+        </script>
+    </div>
+
+
+    </div>
+
+
+    <div class="hero-cont">
+
+        <div class="hero">
+
+
+
+            <div class="heroText-cont">
+                <div class="heroText">
+                    <div class="hText-cont">
+
+                        <h2 class="hText-main">Wear your feet with</h2>
+                        <div class="tbs-cont">
+                            <div class="scrollText-cont">
+                                <div class="scrollText">
+
+                                    <h2>
+                                        <span>nike.</span>
+                                    </h2>
+
+                                    <h2>
+                                        <span>the finer.</span>
+                                    </h2>
+
+                                    <h2>
+                                        <span>the greater.</span>
+                                    </h2>
+
+                                    <h2>
+                                        <span>the best.</span>
+                                    </h2>
+
+                                    <h2>
+                                        <span>nike.</span>
+                                    </h2>
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="hText-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt perferendis
+                            odit
+                            eaque cupiditate quo similique, voluptatum modi ex facilis enim eligendi repellendus laborum
+                            error placeat nam, hic doloremque perspiciatis.</p>
+
+                        <div class="cta-cont">
+                            <h2 class="cta">learn more</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <main class="mn">
+
+        <div class="noticeBar" id="shop">
             <h2 id="tx0">avemaria pues ome </h2>
             <h2 id="tx1">avemaria pues ome </h2>
             <h2 id="tx2">avemaria pues ome </h2>
             <h2 id="tx3">avemaria pues ome </h2>
             <h2 id="tx4">avemaria pues ome </h2>
         </div>
-
-    </header>
-
-    <main class="mn">
 
         <div class="product-cont">
 
@@ -532,9 +618,80 @@
 
     </main>
 
+
+    <div id="aboutUs" class="aboutUs-cont">
+
+        <div class="aboutUsTop-cont">
+            <div class="aboutUs-bar2"></div>
+            <div class="aboutUsTop">
+
+                <div class="aboutUsText">
+                    <div class="icon_text">
+                        <div class="aboutUsTop-icon"><i class="fas fa-globe"></i></div>
+                        <div class="aboutUsTop-text">
+                            <h2>worldwide shipping</h2>
+                        </div>
+                    </div>
+
+                    <div class="icon_text">
+                        <div class="aboutUsTop-icon"><i class="fas fa-shipping-fast"></i></i></div>
+                        <div class="aboutUsTop-text">
+                            <h2>ready to deliver</h2>
+                        </div>
+                    </div>
+
+                    <div class="icon_text">
+                        <div class="aboutUsTop-icon"><i class="far fa-clock"></i></div>
+                        <div class="aboutUsTop-text">
+                            <h2>arrives in one week</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="aboutUs">
+            <div id="a1" class="us-cont">
+                <h2>our values</h2>
+                <div class="aboutUs-bar"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam amet perspiciatis, commodi
+                    est
+                    perferendis officia quas deleniti numquam ratione error quod maiores quia molestias odit
+                    sequi totam
+                    tenetur optio laudantium?</p>
+            </div>
+            <div id="a2" class="us-cont">
+                <h2>about us</h2>
+                <div class="aboutUs-bar"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam amet perspiciatis, commodi
+                    est
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam amet perspiciatis, commodi
+                    est
+                    perferendis officia quas deleniti numquam ratione error quod maiores quia molestias odit
+                    sequi totam
+                    perferendis officia quas deleniti numquam ratione error quod maiores quia molestias odit
+                    sequi totam
+                    tenetur optio</p>
+            </div>
+            <div id="a3" class="us-cont">
+                <h2>our mission</h2>
+                <div class="aboutUs-bar"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam amet perspiciatis, commodi
+                    est
+                    perferendis officia quas deleniti numquam ratione error quod maiores quia molestias odit
+                    sequi totam
+                    tenetur optio laudantium?</p>
+            </div>
+        </div>
+
+
+    </div>
+
     <footer>
 
-        <div class="footerBar-cont">
+        <div id="contact" class="footerBar-cont">
             <div class="footerBar"></div>
         </div>
 
@@ -547,7 +704,7 @@
             <div class="address-cont">
 
                 <div class="address">
-                    <h2>adress</h2>
+                    <h2>address</h2>
                     <p>P. sherman 42 Wallaby way - Sydney, NSW.</p>
                 </div>
 
@@ -558,7 +715,7 @@
                 </div>
             </div>
 
-            <div class="FAQ-cont">
+            <div id="FAQ" class="FAQ-cont">
                 <div class="FAQ">
                     <h2>faq</h2>
                     <li>How long does shipping take?</li>
@@ -569,9 +726,6 @@
                 </div>
             </div>
 
-           
-
-
             <div class="socialIcons">
                 <i title="WhatsApp" class="fab fa-whatsapp"></i>
                 <i title="GitHub" class="fab fa-github"></i>
@@ -579,14 +733,14 @@
                 <i title="Linkedin" id="in" class="fab fa-linkedin-in"></i>
             </div>
 
-
-            <div class="velzck">
-                <h2>2022 Alejandro Velasquez.</h2>
-            </div>
-
         </div>
 
-
+        <div class="velzck-cont">
+            <div class="velzck">
+                <h2 class="v1">2022 Alejandro Velasquez.</h2>
+                <h2 class="v2"><i class="fas fa-map-marker-alt"></i> Medellín, Colombia.</h2>
+            </div>
+        </div>
 
 
     </footer>
