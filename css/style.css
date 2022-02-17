@@ -206,7 +206,7 @@ body::-webkit-scrollbar {
 }
 
 .tittle {
-    cursor: default;
+    cursor: pointer;
     z-index: -1;
     background-color: rgb(0, 0, 0);
     font-size: 4rem;
@@ -349,9 +349,6 @@ body::-webkit-scrollbar {
 .hero {
     width: 100%;
     height: 100%;
-    /*     background-image: url(/imgs/parallax/bg.png);
-    background-size: cover;
-    background-position: center; */
 }
 
 .heroText-cont {
@@ -1255,7 +1252,6 @@ body::-webkit-scrollbar {
     -moz-transition: 0.5s ease-in-out;
 }
 
-
 .product-cont>*:not(.scrollImage-cont, .scrollImage-cont2)::before {
     z-index: 1;
     content: '';
@@ -1279,6 +1275,12 @@ body::-webkit-scrollbar {
     -moz-transform: scale(2) translateY(1.5rem);
     -webkit-transform: scale(2) translateY(1.5rem);
     color: rgb(80, 80, 80);
+}
+
+.dsc {
+    width: 100%;
+    height: 100%;
+    background-color: red;
 }
 
 /* BACKGROUND COLOR */
@@ -1349,22 +1351,16 @@ body::-webkit-scrollbar {
 
 /* BACKGROUND COLOR */
 
-
 .product-cont>*:hover .sneaker-img {
-    transform: scale(1.2) rotate(-10deg);
-    -webkit-transform: scale(1.2) rotate(-10deg);
-    -moz-transform: scale(1.2) rotate(-10deg);
-}
-
-.product-cont>*:hover .sneakerDesc .sneakerName {
-    color: white;
-    transform: translateY(-17.5rem);
-    -webkit-transform: translateY(-17.5rem);
-    -moz-transform: translateY(-17.5rem);
-    opacity: 1;
+    transform: scale(1.1) rotate(-10deg);
+    -webkit-transform: scale(1.1) rotate(-10deg);
+    -moz-transform: scale(1.1) rotate(-10deg);
 }
 
 .product-cont>*:hover .sneaker-decor {
+    transition-delay: 500ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
     transform: translateY(2.5rem);
     -webkit-transform: translateY(2.5rem);
     -moz-transform: translateY(2.5rem);
@@ -1376,39 +1372,13 @@ body::-webkit-scrollbar {
     -moz-transform: scale(1.1);
 }
 
-.product-cont>*:hover .sneakerSize h3 {
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition-delay: 0.4s;
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    opacity: 1;
-}
-
 .product-cont>*:hover .btnBuy-cont {
-    transform: translateY(-0.4rem) translateX(7.5rem);
-    -webkit-transform: translateY(-0.4rem) translateX(7.5rem);
-    -moz-transform: translateY(-0.4rem) translateX(7.5rem);
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition-delay: 1s;
     -webkit-transition-delay: 1s;
     -moz-transition-delay: 1s;
-    opacity: 1;
-}
-
-.product-cont>*:hover .sneakerSize .sizes {
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition-delay: 0.65s;
-    -webkit-transition-delay: 0.65s;
-    -moz-transition-delay: 0.65s;
-    transform: translateY(0) translateX(0);
-    -webkit-transform: translateY(0) translateX(0);
-    -moz-transform: translateY(0) translateX(0);
     opacity: 1;
 }
 
@@ -1436,32 +1406,147 @@ body::-webkit-scrollbar {
     position: absolute;
 }
 
-.sneakerDesc .sneakerName {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    transition: opacity 1s, transform 0.5s;
-    -webkit-transition: opacity 1s, transform 0.5s;
-    -moz-transition: opacity 1s, transform 0.5s;
-    transform: translateY(-280px);
+.sneakerDesc::before {
+    display: flex;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+    content: '';
     color: white;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    background-color: var(--darkestGrey);
+    position: absolute;
+    border-top: 2px solid var(--lightGrey);
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transform: translateY(5.8rem);
+    -webkit-transform: translateY(5.8rem);
+    -moz-transform: translateY(5.8rem);
+}
+
+.product-cont>*:hover .sneakerDesc::before {
+    transform: translateY(0rem);
+    transition-delay: 500ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+}
+
+.data-cont {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr 0.7fr;
+}
+
+.sneakerDesc .sneakerName {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    color: white;
+    font-family: var(--pFont);
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sneakerDesc .sneakerName::before {
+    content: '';
+    width: 100%;
+    height: 7rem;
+    display: block;
+    position: absolute;
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    transform: translateY(-8rem);
+    -webkit-transform: translateY(-8rem);
+    -moz-transform: translateY(-8rem);
     opacity: 0;
 }
 
+.product-cont>*:hover .sneakerDesc .sneakerName::before {
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    opacity: 1;
+}
+
+.sneakerDesc .sneakerName h2 {
+    font-size: 2rem;
+    background-color: transparent;
+    overflow: hidden;
+    transform: translateY(-8rem);
+    -webkit-transform: translateY(-8rem);
+    -moz-transform: translateY(-8rem);
+    z-index: 1;
+    opacity: 0;
+}
+
+.snk-class {
+    width: 100%;
+    height: 2rem;
+    overflow: hidden;
+}
+
+.sneakerDesc .sneakerName h3 {
+    transform: translateY(-3rem);
+    -webkit-transform: translateY(-3rem);
+    -moz-transform: translateY(-3rem);
+    font-size: 0rem;
+    opacity: 0;
+}
+
+.product-cont>*:hover .sneakerDesc .sneakerName h2 {
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    opacity: 1;
+}
+
+.product-cont>*:hover .sneakerDesc .sneakerName h3 {
+    transition-delay: 300ms;
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    font-size: 1.5rem;
+    opacity: 1;
+}
+
+
 .btnBuy-cont {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-right: 3rem;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
-    opacity: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     cursor: pointer;
     z-index: 2;
     text-transform: uppercase;
     font-size: 1.3rem;
-    transform: translateY(4rem) translateX(7.5rem);
-    -webkit-transform: translateY(4rem) translateX(7.5rem);
-    -moz-transform: translateY(4rem) translateX(7.5rem);
-    position: absolute;
+    opacity: 0;
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+    -moz-transform: translateY(5rem);
+}
+
+.product-cont>*:hover .btnBuy-cont {
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    opacity: 1;
 }
 
 .btnBuy {
@@ -1553,21 +1638,54 @@ body::-webkit-scrollbar {
     z-index: -1;
 }
 
+.sneakerSize {
+    margin-left: 3rem;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    z-index: 2;
+    opacity: 1;
+}
+
 .sneakerDesc .sneakerSize h3 {
     color: white;
     text-transform: uppercase;
     font-size: 1.3rem;
+    transform: translateY(8rem);
+    -webkit-transform: translateY(8rem);
+    -moz-transform: translateY(8rem);
     opacity: 0;
 }
 
-.sneakerSize {
-    color: white;
-    text-transform: uppercase;
+.product-cont>*:hover .sneakerSize h3 {
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    transition-delay: 500ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    opacity: 1;
+}
+
+.sneakerDesc .sneakerSize .sizes {
     font-size: 1.3rem;
-    transform: translateY(7rem) translateX(-5rem);
-    -webkit-transform: translateY(7rem) translateX(-5rem);
-    -moz-transform: translateY(7rem) translateX(-5rem);
+    color: white;
     opacity: 0;
+    transform: translateY(7rem);
+    -webkit-transform: translateY(7rem);
+    -moz-transform: translateY(7rem);
+}
+
+.product-cont>*:hover .sneakerSize .sizes {
+    opacity: 1;
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    transition-delay: 700ms;
+    -webkit-transition-delay: 700ms;
+    -moz-transition-delay: 700ms;
 }
 
 .product-cont>*:hover .sneakerSize {
@@ -1577,21 +1695,8 @@ body::-webkit-scrollbar {
     transition-delay: 0.4s;
     -webkit-transition-delay: 0.4s;
     -moz-transition-delay: 0.4s;
-    transform: translateY(-1.2rem) translateX(-5rem);
-    -webkit-transform: translateY(-1.2rem) translateX(-5rem);
-    -moz-transform: translateY(-1.2rem) translateX(-5rem);
     opacity: 1;
 }
-
-.sneakerDesc .sneakerSize .sizes {
-    font-size: 1.3rem;
-    transform: translateY(7rem);
-    -webkit-transform: translateY(7rem);
-    -moz-transform: translateY(7rem);
-    color: white;
-    opacity: 0;
-}
-
 
 /* card-cont */
 
@@ -1803,6 +1908,22 @@ body::-webkit-scrollbar {
         transform: translateY(0rem);
     }
 }
+
+.scrollpage-cont {
+    width: 100%;
+    height: 3rem;
+    bottom: 1px;
+    display: block;
+    position: relative;
+}
+
+.scrollpage {
+    width: 100%;
+
+    height: 100%;
+}
+
+.scrollpage i {}
 
 /* ABOUT US */
 
@@ -2168,7 +2289,6 @@ body::-webkit-scrollbar {
     transition: all 500ms;
     -webkit-transition: all 500ms;
     -moz-transition: all 500ms;
-
     cursor: pointer;
 }
 

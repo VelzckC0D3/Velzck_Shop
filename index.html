@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Velzck Shop</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -19,11 +21,13 @@
 
 <body>
 
+
+
     <header id="top">
 
 
         <div class="cont-nav pMain">
-            <h1 class="tittle"> <span>Velzck</span> Shop</h1>
+            <a href="#top"><h1 class="tittle">  <span>Velzck</span> Shop</h1></a>
             <div class="menuBar"></div>
             <div class="nav-main">
 
@@ -64,7 +68,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.menu-btn').click(function () {
+            $('.menu-btn').click (function () {
                 $('.nav-cont').toggleClass('active')
                 $('.menu-btn').toggleClass('btn-active')
                 $('.menu-btn-active').toggleClass('close-active')
@@ -73,12 +77,25 @@
                 $('.ul3').toggleClass('active')
                 $('.ul4').toggleClass('active')
                 $('.ul5').toggleClass('active')
-            })
-        })
+            });
+
+            $('.ul-cont').click(function () {
+                $('.nav-cont').toggleClass('active')
+                $('.menu-btn').toggleClass('btn-active')
+                $('.menu-btn-active').toggleClass('close-active')
+                $('.ul1').toggleClass('active')
+                $('.ul2').toggleClass('active')
+                $('.ul3').toggleClass('active')
+                $('.ul4').toggleClass('active')
+                $('.ul5').toggleClass('active')
+            });
+
+
+        });
     </script>
 
     <div class="hero-parallax">
-        <div class="rellax snkbg" data-rellax-speed="-2.5"data-rellax-zindex="0"></div>
+        <div class="rellax snkbg" data-rellax-speed="-2.5" data-rellax-zindex="0"></div>
         <div class="rellax snk" data-rellax-speed="-1" data-rellax-zindex="1"></div>
 
         <script src="/rellax.min.js"></script>
@@ -94,8 +111,6 @@
     <div class="hero-cont">
 
         <div class="hero">
-
-
 
             <div class="heroText-cont">
                 <div class="heroText">
@@ -166,10 +181,14 @@
             <div tabindex="0" id="snkc" class="sneaker-cont1">
                 <img class="sneaker-img" src="/imgs/1.1.PNG" alt="Nike Jordan SB">
                 <div class="sneakerDesc">
+
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 1</h2>
+                            <h2>Nike air grey</h2>
+                            <div class="snk-class">
+                                <h3>jordan 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -195,7 +214,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 2</h2>
+                            <h2>Nike air red</h2>
+                            <div class="snk-class">
+                                <h3>jordan 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -221,7 +243,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 3</h2>
+                            <h2>Nike air mid</h2>
+                            <div class="snk-class">
+                                <h3>jordan 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -247,7 +272,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 4</h2>
+                            <h2>Nike green</h2>
+                            <div class="snk-class">
+                                <h3>air force 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -273,7 +301,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 5</h2>
+                            <h2>Nike valentine</h2>
+                            <div class="snk-class">
+                                <h3>air force 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -299,7 +330,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 6</h2>
+                            <h2>Nike champagne</h2>
+                            <div class="snk-class">
+                                <h3>air max 95</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -325,7 +359,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 7</h2>
+                            <h2>Nike platinum</h2>
+                            <div class="snk-class">
+                                <h3>air max 270</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -351,7 +388,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 8</h2>
+                            <h2>Nike react eng</h2>
+                            <div class="snk-class">
+                                <h3>air max 270</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -377,7 +417,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 9</h2>
+                            <h2>Nike fontanka</h2>
+                            <div class="snk-class">
+                                <h3>air force 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -403,7 +446,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 10</h2>
+                            <h2>Nike low black</h2>
+                            <div class="snk-class">
+                                <h3>air force 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -429,7 +475,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 11</h2>
+                            <h2>Nike wmns</h2>
+                            <div class="snk-class">
+                                <h3>air max 95</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -455,7 +504,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 12</h2>
+                            <h2>Nike mid smoke</h2>
+                            <div class="snk-class">
+                                <h3>jordan 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -481,7 +533,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 13</h2>
+                            <h2>Retro High Tie Dye</h2>
+                            <div class="snk-class">
+                                <h3>jordan 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -507,7 +562,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 14</h2>
+                            <h2>Nike low raygun</h2>
+                            <div class="snk-class">
+                                <h3>air force 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -532,8 +590,12 @@
                 <div class="sneakerDesc">
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
+
                         <div class="sneakerName">
-                            <h2>Nike sneaker 15</h2>
+                            <h2>Nike mid satin grey</h2>
+                            <div class="snk-class">
+                                <h3>jordan 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -559,7 +621,10 @@
                     <div class="sneaker-decor"></div>
                     <div class="data-cont">
                         <div class="sneakerName">
-                            <h2>Nike sneaker 16</h2>
+                            <h2>Nike low white</h2>
+                            <div class="snk-class">
+                                <h3>air force 1</h3>
+                            </div>
                         </div>
                         <div class="btnBuy-cont">
                             <div class="btnBuy">
@@ -616,16 +681,18 @@
 
         </div>
 
+        <div class="scrollpage-cont">
+        </div>
+
     </main>
 
-
-    <div id="aboutUs" class="aboutUs-cont">
+    <div class="aboutUs-cont">
 
         <div class="aboutUsTop-cont">
             <div class="aboutUs-bar2"></div>
             <div class="aboutUsTop">
 
-                <div class="aboutUsText">
+                <div id="aboutUs"  class="aboutUsText">
                     <div class="icon_text">
                         <div class="aboutUsTop-icon"><i class="fas fa-globe"></i></div>
                         <div class="aboutUsTop-text">
@@ -685,36 +752,27 @@
                     tenetur optio laudantium?</p>
             </div>
         </div>
-
-
     </div>
 
     <footer>
-
         <div id="contact" class="footerBar-cont">
             <div class="footerBar"></div>
         </div>
-
         <div class="footerBar-cont2">
             <div class="footerBar2"></div>
         </div>
-
         <div class="footer-cont">
-
             <div class="address-cont">
-
                 <div class="address">
                     <h2>address</h2>
                     <p>P. sherman 42 Wallaby way - Sydney, NSW.</p>
                 </div>
-
                 <div class="contact">
                     <h2>contact number</h2>
                     <li><span>direct line:</span> +99 666-6969-420.</li>
                     <li><span>business:</span> +99 420-9696-666.</li>
                 </div>
             </div>
-
             <div id="FAQ" class="FAQ-cont">
                 <div class="FAQ">
                     <h2>faq</h2>
@@ -725,14 +783,12 @@
                     <li>Can i cancel my order?</li>
                 </div>
             </div>
-
             <div class="socialIcons">
                 <i title="WhatsApp" class="fab fa-whatsapp"></i>
                 <i title="GitHub" class="fab fa-github"></i>
                 <i title="Instagram" class="fab fa-instagram"></i>
                 <i title="Linkedin" id="in" class="fab fa-linkedin-in"></i>
             </div>
-
         </div>
 
         <div class="velzck-cont">
@@ -742,9 +798,6 @@
             </div>
         </div>
 
-
     </footer>
-
 </body>
-
 </html>
