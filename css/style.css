@@ -564,6 +564,7 @@ body::-webkit-scrollbar {
     padding: 0.3rem 2rem;
 }
 .heroText .cta {
+    transform: scale(1.2);
     font-size: 1.7rem;
     padding: 0.5rem 1rem;
     border: 1px solid #fff;
@@ -572,6 +573,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    -webkit-text-stroke: 0.4px;
     -webkit-overflow: hidden;
     animation: rgb 12s infinite;
     -webkit-animation: rgb 12s infinite;
@@ -582,7 +584,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 .heroText .cta:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
     color: #fff;
 }
 .heroText .cta::after {
